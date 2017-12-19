@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>860</width>
-    <height>542</height>
+    <width>703</width>
+    <height>459</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -55,6 +55,16 @@
       <height>481</height>
      </rect>
     </property>
+    <widget class="QTextEdit" name="textEdit_style">
+     <property name="geometry">
+      <rect>
+       <x>3</x>
+       <y>0</y>
+       <width>501</width>
+       <height>371</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -62,7 +72,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>860</width>
+     <width>703</width>
      <height>23</height>
     </rect>
    </property>

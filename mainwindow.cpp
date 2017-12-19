@@ -18,8 +18,10 @@ MainWindow::~MainWindow()
 void MainWindow::resizeEvent(QResizeEvent *e)
 {
     ui->widget_option->setGeometry(0, 0, 200, this->height());
-    ui->widget_contect->setGeometry(this->width() - ui->widget_option->width(), 0,
-                                    this->width() - ui->widget_option->width(), this->height());
+    ui->widget_contect->setGeometry(ui->widget_option->width(), 0,
+        this->width() - ui->widget_option->width(), this->height()-50);
+    ui->textEdit_style->setGeometry(0, 0,
+        ui->widget_contect->width(), ui->widget_contect->height());
 }
 
 
