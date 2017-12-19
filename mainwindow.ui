@@ -67,6 +67,10 @@
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="source.qrc">
+     <normaloff>:/icon/images/about.png</normaloff>:/icon/images/about.png</iconset>
+   </property>
    <property name="text">
     <string>About</string>
    </property>
@@ -75,6 +79,10 @@
    </property>
   </action>
   <action name="actionCopy">
+   <property name="icon">
+    <iconset resource="source.qrc">
+     <normaloff>:/icon/images/copy.png</normaloff>:/icon/images/copy.png</iconset>
+   </property>
    <property name="text">
     <string>Copy</string>
    </property>
@@ -83,6 +91,10 @@
    </property>
   </action>
   <action name="actionCut">
+   <property name="icon">
+    <iconset resource="source.qrc">
+     <normaloff>:/icon/images/cut.png</normaloff>:/icon/images/cut.png</iconset>
+   </property>
    <property name="text">
     <string>Cut</string>
    </property>
@@ -91,6 +103,10 @@
    </property>
   </action>
   <action name="actionPaste">
+   <property name="icon">
+    <iconset resource="source.qrc">
+     <normaloff>:/icon/images/paste.png</normaloff>:/icon/images/paste.png</iconset>
+   </property>
    <property name="text">
     <string>Paste</string>
    </property>
@@ -99,6 +115,10 @@
    </property>
   </action>
   <action name="actionSelect_All">
+   <property name="icon">
+    <iconset resource="source.qrc">
+     <normaloff>:/icon/images/select.png</normaloff>:/icon/images/select.png</iconset>
+   </property>
    <property name="text">
     <string>Select All</string>
    </property>
@@ -108,6 +128,8 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="source.qrc"/>
+ </resources>
  <connections/>
 </ui>
