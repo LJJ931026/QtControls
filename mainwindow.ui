@@ -59,9 +59,19 @@
      <property name="geometry">
       <rect>
        <x>3</x>
+       <y>80</y>
+       <width>501</width>
+       <height>311</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QWidget" name="widget_display" native="true">
+     <property name="geometry">
+      <rect>
+       <x>-1</x>
        <y>0</y>
        <width>501</width>
-       <height>371</height>
+       <height>80</height>
       </rect>
      </property>
     </widget>

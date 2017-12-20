@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QSplitter>
+#include <QFile>
 
 namespace Ui {
 class MainWindow;
@@ -23,6 +23,7 @@ private:
     void InitSys();
     void InitControls(); // 初始化控件ComboBox
     void InitCtrlsStyle(); // 初始化控件样式
+    void LoadStyle();
 
 private slots:
     void resizeEvent(QResizeEvent *e);

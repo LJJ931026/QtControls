@@ -13,4 +13,7 @@
         <file>images/main.png</file>
         <file>images/main_hover.png</file>
     </qresource>
+    <qresource prefix="/style">
+        <file>style.qss</file>
+    </qresource>
 </RCC>
