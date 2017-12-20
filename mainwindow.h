@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QFile>
+#include "Header.h"
 
 namespace Ui {
 class MainWindow;
@@ -18,6 +18,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QPushButton *pushButton;
 
     // 函数
     void InitSys();
@@ -25,8 +26,19 @@ private:
     void InitCtrlsStyle(); // 初始化控件样式
     void LoadStyle();
 
+    // 按钮
+    void PushButtonStyle();
+
 private slots:
     void resizeEvent(QResizeEvent *e);
+    void on_comboBox_ctrls_currentIndexChanged(int index);
+    void on_pushButton_color_clicked();
+    void on_pushButton_bgk_color_clicked();
+    void on_lineEdit_font_color_editingFinished();
+    void on_lineEdit_bgk_color_editingFinished();
+
+    void on_lineEdit_Name_editingFinished();
+
 };
 
 #endif // MAINWINDOW_H

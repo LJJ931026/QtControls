@@ -106,18 +106,19 @@ compiler_rcc_make_all: debug/qrc_source.cpp
 compiler_rcc_clean:
 	-$(DEL_FILE) debug\qrc_source.cpp
 debug/qrc_source.cpp: source.qrc \
-		images/about.png \
-		images/select_hover.png \
-		images/cut_hover.png \
-		images/copy.png \
-		images/paste.png \
-		images/select.png \
-		images/paste_hover.png \
-		images/main_hover.png \
+		style.qss \
 		images/main.png \
+		images/copy_hover.png \
+		images/select_hover.png \
+		images/select.png \
+		images/about.png \
+		images/paste_hover.png \
 		images/cut.png \
-		images/about_hover.png \
-		images/copy_hover.png
+		images/cut_hover.png \
+		images/paste.png \
+		images/main_hover.png \
+		images/copy.png \
+		images/about_hover.png
 	D:\software\QT\5.2.0\mingw48_32\bin\rcc.exe -name source source.qrc -o debug\qrc_source.cpp
 
 compiler_moc_header_make_all: debug/moc_mainwindow.cpp
@@ -234,9 +235,9 @@ debug/moc_mainwindow.cpp: ../../../../software/QT/5.2.0/mingw48_32/include/QtWid
 		../../../../software/QT/5.2.0/mingw48_32/include/QtGui/qtouchdevice.h \
 		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qtabwidget.h \
 		../../../../software/QT/5.2.0/mingw48_32/include/QtGui/qicon.h \
-		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/QSplitter \
-		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qsplitter.h \
-		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qframe.h \
+		Header.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtCore/QFile \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtCore/QDebug \
 		mainwindow.h
 	D:\software\QT\5.2.0\mingw48_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 $(INCPATH) mainwindow.h -o debug\moc_mainwindow.cpp
 
@@ -372,9 +373,9 @@ debug/main.o: main.cpp mainwindow.h \
 		../../../../software/QT/5.2.0/mingw48_32/include/QtGui/qtouchdevice.h \
 		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qtabwidget.h \
 		../../../../software/QT/5.2.0/mingw48_32/include/QtGui/qicon.h \
-		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/QSplitter \
-		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qsplitter.h \
-		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qframe.h \
+		Header.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtCore/QFile \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtCore/QDebug \
 		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/QApplication \
 		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qapplication.h \
 		../../../../software/QT/5.2.0/mingw48_32/include/QtCore/qcoreapplication.h \
@@ -496,10 +497,56 @@ debug/mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../../../software/QT/5.2.0/mingw48_32/include/QtGui/qtouchdevice.h \
 		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qtabwidget.h \
 		../../../../software/QT/5.2.0/mingw48_32/include/QtGui/qicon.h \
-		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/QSplitter \
-		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qsplitter.h \
+		Header.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtCore/QFile \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtCore/QDebug \
+		ui_mainwindow.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtCore/QVariant \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/QAction \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qaction.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qactiongroup.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/QApplication \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qapplication.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtCore/qcoreapplication.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtCore/qeventloop.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qdesktopwidget.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtGui/qguiapplication.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtGui/qinputmethod.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/QButtonGroup \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qbuttongroup.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/QComboBox \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qcombobox.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qabstractitemdelegate.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qstyleoption.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qabstractspinbox.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtGui/qvalidator.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtCore/qregularexpression.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qslider.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qabstractslider.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qstyle.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qtabbar.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qrubberband.h \
 		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qframe.h \
-		ui_mainwindow.h
+		../../../../software/QT/5.2.0/mingw48_32/include/QtCore/qabstractitemmodel.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/QHeaderView \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qheaderview.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qabstractitemview.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qabstractscrollarea.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtCore/qitemselectionmodel.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/QMenu \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qmenu.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/QMenuBar \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qmenubar.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/QTextEdit \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qtextedit.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtGui/qtextdocument.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtGui/qtextoption.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtGui/qtextcursor.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtGui/qtextformat.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtGui/qpen.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/QToolBar \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/qtoolbar.h \
+		../../../../software/QT/5.2.0/mingw48_32/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o mainwindow.cpp
 
 debug/qrc_source.o: debug/qrc_source.cpp 
