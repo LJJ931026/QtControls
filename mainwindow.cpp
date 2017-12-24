@@ -158,7 +158,7 @@ void MainWindow::on_lineEdit_bgk_color_editingFinished()
     bool isExist = false;
     int Row = -1;
     for(int i = 0; i < size; i++) {
-        if(CtrlProperty.at(i).Key == "BGK-color:") {
+        if(CtrlProperty.at(i).Key == "background-color:") {
             Row = i;
             isExist = true;
             break;
@@ -184,7 +184,7 @@ void MainWindow::on_lineEdit_bgk_color_editingFinished()
     else {
         if(ui->lineEdit_bgk_color->text() != "") {
             JMap map;
-            map.Key = "BGK-color:";
+            map.Key = "background-color:";
             map.Value = ui->lineEdit_bgk_color->text();
             CtrlProperty.push_back(map);
         }
