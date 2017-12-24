@@ -154,7 +154,51 @@ void MainWindow::on_pushButton_bgk_color_clicked()
 
 void MainWindow::on_lineEdit_bgk_color_editingFinished()
 {
+    int size = CtrlProperty.size();
+    bool isExist = false;
+    int Row = -1;
+    for(int i = 0; i < size; i++) {
+        if(CtrlProperty.at(i).Key == "BGK-color:") {
+            Row = i;
+            isExist = true;
+            break;
+        }
+    }
+    if(isExist) {
+        if(ui->lineEdit_bgk_color->text() == "") {
+            CtrlProperty.removeAt(Row);
+        }
+        else {
+            if(Row != -1) {
+                JMap map = CtrlProperty.at(Row); // 赋值
+                if(map.Value == ui->lineEdit_bgk_color->text()) return;
 
+                CtrlProperty.removeAt(Row); // 删除
+
+                map.Value = ui->lineEdit_bgk_color->text(); // 修改
+
+                CtrlProperty.insert(Row, map); // 插入
+            }
+        }
+    }
+    else {
+        if(ui->lineEdit_bgk_color->text() != "") {
+            JMap map;
+            map.Key = "BGK-color:";
+            map.Value = ui->lineEdit_bgk_color->text();
+            CtrlProperty.push_back(map);
+        }
+    }
+    ui->textEdit_style->clear();
+    for(int i = 0; i < CtrlProperty.size(); i++) {
+        QString str;
+        str = CtrlProperty.at(i).Key + CtrlProperty.at(i).Value;
+        if(CtrlProperty.at(i).Key != "QPushButton#")
+            ui->textEdit_style->append("    " + str);
+        else
+            ui->textEdit_style->append(str);
+    }
+    ui->textEdit_style->append("}");
 }
 
 /////////////////////////函数//////////////////////////////////////////
@@ -191,8 +235,7 @@ void MainWindow::LoadStyle()
 
     qssFile.open(QFile::ReadOnly);
 
-    if (qssFile.isOpen())
-    {
+    if (qssFile.isOpen()) {
         qss = QLatin1String(qssFile.readAll());
 
         this->setStyleSheet(qss);
