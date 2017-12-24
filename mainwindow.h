@@ -20,6 +20,8 @@ private:
     Ui::MainWindow *ui;
     QPushButton *pushButton;
 
+    QVector<JMap> CtrlProperty;
+
     // 函数
     void InitSys();
     void InitControls(); // 初始化控件ComboBox

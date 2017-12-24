@@ -21,5 +21,10 @@ enum SelectCtrls{
     JLabel
 };
 
+struct JMap{
+    QString Key;
+    QString Value;
+};
+
 
 #endif // HEADER_H
