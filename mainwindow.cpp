@@ -143,6 +143,9 @@ void MainWindow::on_lineEdit_font_color_editingFinished()
             ui->textEdit_style->append(str);
     }
     ui->textEdit_style->append("}");
+
+    pushButton_qss.append(QString("QPushButton{color:%1;}").arg(ui->lineEdit_font_color->text()));
+    pushButton->setStyleSheet(pushButton_qss.join(""));
 }
 
 
@@ -199,6 +202,10 @@ void MainWindow::on_lineEdit_bgk_color_editingFinished()
             ui->textEdit_style->append(str);
     }
     ui->textEdit_style->append("}");
+
+    pushButton_qss.append(QString("QPushButton{background-color:%1;}").
+                          arg(ui->lineEdit_bgk_color->text()));
+    pushButton->setStyleSheet(pushButton_qss.join(""));
 }
 
 /////////////////////////函数//////////////////////////////////////////
@@ -210,6 +217,7 @@ void MainWindow::InitSys()
     InitControls();
     LoadStyle();
 
+    ui->groupBox_property->hide();
     ui->groupBox_property->setEnabled(false);
 
 }
@@ -221,6 +229,15 @@ void MainWindow::InitControls()
     ui->comboBox_ctrls->addItem("toolButton");
     ui->comboBox_ctrls->addItem("radioButton");
     ui->comboBox_ctrls->addItem("label");
+
+    model = new QStandardItemModel(ui->treeView);
+    model->setHorizontalHeaderLabels(QStringList()<<QStringLiteral("属性")<<QStringLiteral("值"));
+    QStandardItem* pColumnItem = model->horizontalHeaderItem(0);
+    pColumnItem->setToolTip(QStringLiteral("属性") );
+
+    pColumnItem = model->horizontalHeaderItem(1);
+    pColumnItem->setToolTip(QStringLiteral("值"));
+    ui->treeView->setModel(model);
 }
 
 void MainWindow::InitCtrlsStyle()

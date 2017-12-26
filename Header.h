@@ -9,6 +9,8 @@
 #include <QRadioButton>
 #include <QLabel>
 #include <QColorDialog>
+#include <QStandardItem>
+#include <QStandardItemModel>
 
 #define HEIGHT  20
 #define WIDTH   20

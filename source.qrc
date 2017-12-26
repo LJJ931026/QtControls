@@ -12,6 +12,12 @@
         <file>images/select_hover.png</file>
         <file>images/main.png</file>
         <file>images/main_hover.png</file>
+        <file>images/fold.png</file>
+        <file>images/fold_hover.png</file>
+        <file>images/fold_pressed.png</file>
+        <file>images/unfold.png</file>
+        <file>images/unfold_hover.png</file>
+        <file>images/unfold_pressed.png</file>
     </qresource>
     <qresource prefix="/style">
         <file>style.qss</file>

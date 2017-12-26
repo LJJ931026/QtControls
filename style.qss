@@ -1,3 +1,18 @@
 QWidget{
 	border:1px solid #B9B9B9
 }
+
+QPushButton#pushButton_property,#pushButton_hover,#pushButton_predssed{
+	background:	#DCDCDC;
+	image:url(:/icon/images/unfold.png);
+}
+
+QPushButton#pushButton_property::hover,#pushButton_hover::hover,#pushButton_predssed::hover{
+	color:blue;
+	background:	#FFDEAD;
+}
+
+QPushButton#pushButton_property::pressed,#pushButton_hover::pressed,#pushButton_predssed::pressed{
+	color:red;
+	background:	#00EEEE;
+}

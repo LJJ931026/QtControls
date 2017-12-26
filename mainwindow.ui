@@ -45,94 +45,23 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QGroupBox" name="groupBox_property">
+    <widget class="QWidget" name="widget_property" native="true">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>60</y>
-       <width>221</width>
-       <height>181</height>
+       <x>0</x>
+       <y>50</y>
+       <width>241</width>
+       <height>361</height>
       </rect>
      </property>
-     <property name="title">
-      <string>属性</string>
-     </property>
-     <widget class="QPushButton" name="pushButton_color">
+     <widget class="QTreeView" name="treeView">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>50</y>
-        <width>61</width>
-        <height>21</height>
+        <x>0</x>
+        <y>0</y>
+        <width>241</width>
+        <height>361</height>
        </rect>
-      </property>
-      <property name="text">
-       <string>字体颜色</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_bgk_color">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>80</y>
-        <width>61</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>背景颜色</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_Name">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>20</y>
-        <width>51</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>名  称:</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_font_color">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>50</y>
-        <width>81</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_bgk_color">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>80</y>
-        <width>81</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_Name">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>20</y>
-        <width>81</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
       </property>
      </widget>
     </widget>
@@ -165,6 +94,106 @@
        <height>80</height>
       </rect>
      </property>
+     <widget class="QGroupBox" name="groupBox_property">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>10</y>
+        <width>239</width>
+        <height>226</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+      <widget class="QPushButton" name="pushButton_color">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>61</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>字体颜色</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_bgk_color">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>80</y>
+         <width>61</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>背景颜色</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Name">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>51</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>名  称:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_font_color">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>50</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_bgk_color">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>80</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_Name">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>20</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
     </widget>
    </widget>
   </widget>

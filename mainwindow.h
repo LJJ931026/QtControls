@@ -18,7 +18,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QStandardItemModel *model;
     QPushButton *pushButton;
+    QStringList pushButton_qss;
 
     QVector<JMap> CtrlProperty;
 
