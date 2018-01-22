@@ -19,6 +19,8 @@ public:
 private:
     Ui::MainWindow *ui;
     QStandardItemModel *model;
+//    QStandardItem* itemParent;
+//    QStandardItem* itemChild;
     QPushButton *pushButton;
     QStringList pushButton_qss;
 

@@ -230,6 +230,7 @@ void MainWindow::InitControls()
     ui->comboBox_ctrls->addItem("radioButton");
     ui->comboBox_ctrls->addItem("label");
 
+    ui->treeView->setEditTriggers(0);
     model = new QStandardItemModel(ui->treeView);
     model->setHorizontalHeaderLabels(QStringList()<<QStringLiteral("属性")<<QStringLiteral("值"));
     QStandardItem* pColumnItem = model->horizontalHeaderItem(0);
@@ -238,6 +239,39 @@ void MainWindow::InitControls()
     pColumnItem = model->horizontalHeaderItem(1);
     pColumnItem->setToolTip(QStringLiteral("值"));
     ui->treeView->setModel(model);
+
+    // 样式表
+    QStandardItem* itemParent = new QStandardItem("样式表");
+    model->setItem(0,0, itemParent/*new QStandardItem("样式表")*/);
+    QStandardItem* itemChild = new QStandardItem("名称");
+    itemParent->setChild(0, 0, itemChild);
+    itemChild = new QStandardItem("");
+    itemParent->setChild(0, 1, itemChild);
+    itemChild = new QStandardItem("字体颜色");
+    itemParent->setChild(1, 0, itemChild);
+    itemChild = new QStandardItem("");
+    itemParent->setChild(1, 1, itemChild);
+    itemChild = new QStandardItem("背景颜色");
+    itemParent->setChild(2, 0, itemChild);
+    itemChild = new QStandardItem("");
+    itemParent->setChild(2, 1, itemChild);
+
+    // 鼠标上划样式
+    itemParent = new QStandardItem("鼠标上划样式");
+    model->setItem(1,0, itemParent);
+    itemChild = new QStandardItem("名称");
+    itemParent->setChild(0, 0, itemChild);
+    itemChild = new QStandardItem("");
+    itemParent->setChild(0, 1, itemChild);
+
+    // 点击后样式
+    itemParent = new QStandardItem("点击后样式");
+    model->setItem(2,0, itemParent);
+    itemChild = new QStandardItem("名称");
+    itemParent->setChild(0, 0, itemChild);
+    itemChild = new QStandardItem("");
+    itemParent->setChild(0, 1, itemChild);
+
 }
 
 void MainWindow::InitCtrlsStyle()

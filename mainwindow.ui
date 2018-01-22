@@ -63,6 +63,12 @@
         <height>361</height>
        </rect>
       </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <attribute name="headerVisible">
+       <bool>false</bool>
+      </attribute>
      </widget>
     </widget>
    </widget>
@@ -97,8 +103,8 @@
      <widget class="QGroupBox" name="groupBox_property">
       <property name="geometry">
        <rect>
-        <x>300</x>
-        <y>10</y>
+        <x>90</x>
+        <y>0</y>
         <width>239</width>
         <height>226</height>
        </rect>
